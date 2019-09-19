@@ -1,461 +1,498 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Title of the document</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title of the document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<style>
-    .testblock{
-        background-color: darkseagreen;
-    }
-    .mapsec{
-        height:100vmin;
-        background-color:grey;
-    }
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .testblock {
+            background-color: darkseagreen;
+        }
 
-    .footer{
-        background-color: navy;
-    }
+        .mapsec {
+            height: 100vmin;
+            background-color: grey;
+        }
 
-    .copy{
-        max-width: 50vh;
-    }
+        .footer {
+            background-color: navy;
+        }
 
-    .fix-pad{
-        padding-left:20%;
-    }
+        .copy {
+            max-width: 50vh;
+        }
 
-    p{
-        font-size: 1.5em;
-    }
+        .fix-pad {
+            padding-left: 20%;
+        }
 
-    h3{
-        font-size: 3em;
-    }
+        p {
+            font-size: 1.5em;
+        }
 
-
-
-</style>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        h3 {
+            font-size: 3em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div>
+    <div>
 
 
-    <!--navbar with large breakpoint-->
-<section>
-    <nav class="navbar navbar-expand-lg navbar-light p-4">
-        <a class="navbar-brand" href="#"><img src="https://www.liveagent.com/fileadmin/images/Integrations/shopify_logo.png" style="height: 40px"></a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <!--navbar with large breakpoint-->
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-light p-4">
+                <a class="navbar-brand" href="#"><img
+                        src="https://www.liveagent.com/fileadmin/images/Integrations/shopify_logo.png"
+                        style="height: 40px"></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
                                 <a class="dropdown-item" href="#">Action 1</a>
                                 <a class="dropdown-item" href="#">Action 2</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                    <a class="dropdown-item" href="#">Action 1</a>
-                                    <a class="dropdown-item" href="#">Action 2</a>
-                                </div>
-                            </li>
-                            
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
-                        </div>
-                    </li>
-            </ul>
-            <ul class="navbar-nav mt-2 mt-lg-0">
-                    <li class="nav-item">
-                            <a class="nav-link" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pricing</a>
-                            
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
                         </li>
 
                         <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                    <a class="dropdown-item" href="#">Action 1</a>
-                                    <a class="dropdown-item" href="#">Action 2</a>
-                                </div>
-                            </li>
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Pricing</a>
 
-                            <a name="" id="" class="btn btn-primary" href="#" role="button">Start Your Free Trial</a>
-            </ul>
-        </div>
-    </nav>
-</section>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Learn</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </li>
+
+                        <a name="" id="" class="btn btn-primary" href="#" role="button">Start Your Free Trial</a>
+                    </ul>
+                </div>
+            </nav>
+        </section>
 
 
-<!--Jumbotron Section-->
-<section>
-    <!--jumbotron for the main page-->
-    <div class="jumbotron">
-        <div class="container">
-    <div class="row justify-content-center">
-            <div class="col-md">
-                <h1>HELLO!</h1>
+        <!--Jumbotron Section-->
+        <section>
+            <!--jumbotron for the main page-->
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md">
+                            <h1>HELLO!</h1>
+                        </div>
+                        <div class="col-md">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bPhUhypV27w"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        <div class="col-md">
-            <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bPhUhypV27w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
 
-</section>
+        </section>
 
 
-    <!--main page content-->
+        <!--main page content-->
 
 
 
         <!--section for prominent copy-->
         <section class="p-5">
-                <div class="container justify-content-center">
-                    <div class="row justify-content-center">
-                    
-                        <div class="col">
-                            <h2 class="text-center">With you from first sale to full scale
+            <div class="container justify-content-center">
+                <div class="row justify-content-center">
 
-                                </h2>
-                   </div>
-                        </div>
-                        
-                    <div class="row justify-content-center">
-                   
-                        <div class="col-sm-5">
-                    <p class="text-center">
-                            One platform with all the ecommerce and point of sale features you need to start, run, and grow your business.
+                    <div class="col">
+                        <h2 class="text-center">With you from first sale to full scale
 
-          
-                        </div>
+                        </h2>
                     </div>
-         </section>
+                </div>
 
-    <!--section for the image and text bodys-->
-    <section>
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-5">
+                        <p class="text-center">
+                            One platform with all the ecommerce and point of sale features you need to start, run, and
+                            grow your business.
+
+
+                    </div>
+                </div>
+        </section>
+
+        <!--section for the image and text bodys-->
+        <section>
             <div class="container">
 
-        <div class="row justify-content-center">
+                <div class="row justify-content-center">
 
 
-                <div class="col-lg">
-                    <img class="img-fluid" src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
-                
-            </div>
-            <div class="col-lg fix-pad">
-                    <h3>Start —<br>
+                    <div class="col-lg">
+                        <img class="img-fluid"
+                            src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
+
+                    </div>
+                    <div class="col-lg fix-pad">
+                        <h3>Start —<br>
                             your business journey
-                    </h3>
-                    <p class="copy">Find a business name, buy a domain, and create a brand with our free tools.
-                            </p>
-                            
-                           <h5>Explore tools to start your business</h5> 
-
-            </div>
-    
-    
-        </div>
-            </div>
-
-        <br>
-        <br>
-        <br>
-
-  <div class="container d-lg-block">
-        <div class="row justify-content-center">
-
-                <div class="col-lg">
-                        <img class="img-fluid" src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
-                </div>
-              
-                <div class="col-lg order-lg-first fix-pad">
-                        <h3>Start —<br>
-                                your business journey
                         </h3>
                         <p class="copy">Find a business name, buy a domain, and create a brand with our free tools.
-                                </p>
-                                
-                               <h5>Explore tools to start your business</h5> 
-    
+                        </p>
+
+                        <h5>Explore tools to start your business</h5>
+
+                    </div>
+
+
                 </div>
-    
-      
-        </div>
-        </div>
-
-
-        <br>
-        <br>
-        <br>
-
-        <div class="container">
-
-        <div class="row justify-content-center">
-          
-                <div class="col-lg">
-                        <img class="img-fluid" src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
-                    
-                </div>
-                <div class="col-lg fix-pad">
-                        <h3>Start —<br>
-                                your business journey
-                        </h3>
-                        <p class="copy">Find a business name, buy a domain, and create a brand with our free tools.
-                                </p>
-                                
-                               <h5>Explore tools to start your business</h5> 
-    
-                </div>
-
-
-
-             
-        
-            </div>
             </div>
 
+            <br>
+            <br>
+            <br>
 
-        <br>
-        <br>
-        <br>
-
-        <div class="container d-lg-block">
+            <div class="container d-lg-block">
                 <div class="row justify-content-center">
-        
-                        <div class="col-lg">
-                                <img class="img-fluid" src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
-                        </div>
-                      
-                        <div class="col-lg order-lg-first fix-pad">
-                                <h3>Start —<br>
-                                        your business journey
-                                </h3>
-                                <p class="copy">Find a business name, buy a domain, and create a brand with our free tools.
-                                        </p>
-                                        
-                                       <h5>Explore tools to start your business</h5> 
-            
-                        </div>
-            
-              
+
+                    <div class="col-lg">
+                        <img class="img-fluid"
+                            src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
+                    </div>
+
+                    <div class="col-lg order-lg-first fix-pad">
+                        <h3>Start —<br>
+                            your business journey
+                        </h3>
+                        <p class="copy">Find a business name, buy a domain, and create a brand with our free tools.
+                        </p>
+
+                        <h5>Explore tools to start your business</h5>
+
+                    </div>
+
+
                 </div>
-                </div>
-
-
-                
-        <br>
-        <br>
-        <br>
-        
-</section>
-
-<br>
-
-<!--three items section-->
-<section>
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-lg">
-            <img class="img-fluid" src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
-
-            <p class="m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nihil, magnam error vero rerum porro. Repudiandae libero in magnam cum velit et ratione ipsa. Officiis eveniet praesentium harum quas adipisci!</p>
-
-        
-    </div>
-    <div class="col-lg">
-            <img class="img-fluid" src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
-
-            <p class="m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nihil, magnam error vero rerum porro. Repudiandae libero in magnam cum velit et ratione ipsa. Officiis eveniet praesentium harum quas adipisci!</p>
-
-        
-        </div>
-        <div class="col-lg">
-                <img class="img-fluid" src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
-
-                <p class="m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nihil, magnam error vero rerum porro. Repudiandae libero in magnam cum velit et ratione ipsa. Officiis eveniet praesentium harum quas adipisci!</p>
-        
             </div>
-    </div>
-    </div>
 
-</section>
 
-<br>
+            <br>
+            <br>
+            <br>
 
-<!--map section-->
-<section class="mapsec">
+            <div class="container">
 
-</section>
+                <div class="row justify-content-center">
 
-<br>
+                    <div class="col-lg">
+                        <img class="img-fluid"
+                            src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
 
-<section class="p-5">
-        <div class="container">
-            <div class="row justify-content-center">
-            
-                <div class="col-md">
-                    <h2 class="text-center">Start your business journey with Shopify
+                    </div>
+                    <div class="col-lg fix-pad">
+                        <h3>Start —<br>
+                            your business journey
+                        </h3>
+                        <p class="copy">Find a business name, buy a domain, and create a brand with our free tools.
+                        </p>
+
+                        <h5>Explore tools to start your business</h5>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="container d-lg-block">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg">
+                        <img class="img-fluid"
+                            src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
+                    </div>
+
+                    <div class="col-lg order-lg-first fix-pad">
+                        <h3>Start —<br>
+                            your business journey
+                        </h3>
+                        <p class="copy">Find a business name, buy a domain, and create a brand with our free tools.
+                        </p>
+
+                        <h5>Explore tools to start your business</h5>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+
+        </section>
+
+        <br>
+
+        <!--three items section-->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <img class="img-fluid"
+                            src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
+
+                        <p class="m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nihil,
+                            magnam error vero rerum porro. Repudiandae libero in magnam cum velit et ratione ipsa.
+                            Officiis eveniet praesentium harum quas adipisci!</p>
+
+
+                    </div>
+                    <div class="col-lg">
+                        <img class="img-fluid"
+                            src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
+
+                        <p class="m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nihil,
+                            magnam error vero rerum porro. Repudiandae libero in magnam cum velit et ratione ipsa.
+                            Officiis eveniet praesentium harum quas adipisci!</p>
+
+
+                    </div>
+                    <div class="col-lg">
+                        <img class="img-fluid"
+                            src="https://cdn.shopify.com/assets2/homepage/start-en-small-99ac3533dfebcb2e00592dce004d52f4d623ed0707faf7422203ce4094f7c1bd.png">
+
+                        <p class="m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nihil,
+                            magnam error vero rerum porro. Repudiandae libero in magnam cum velit et ratione ipsa.
+                            Officiis eveniet praesentium harum quas adipisci!</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <br>
+
+        <!--map section-->
+        <section class="mapsec">
+
+        </section>
+
+        <br>
+
+        <section class="p-5">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-md">
+                        <h2 class="text-center">Start your business journey with Shopify
                         </h2>
-           </div>
+                    </div>
                 </div>
-                
-            <div class="row justify-content-center">
-           
-                <div class="col-sm-5">
-            <p class="text-center">
-                    Try Shopify for free, and explore all the tools and services you need to start, run, and grow your business.            </div>
-  
+
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-5">
+                        <p class="text-center">
+                            Try Shopify for free, and explore all the tools and services you need to start, run, and
+                            grow your business.
+                    </div>
+
                 </div>
                 <div class="row justify-content-center">
 
-                <a name="" id="" class="btn btn-primary" href="#" role="button">Start Free Trial</a>
-                    </div>
-            </div>
- </section>
-
-<!--footer section-->
-<section class="footer p-5">
-    <!--footer-->
-    <footer>
-
-        <div class="row justify-content-start">
-
-            <div class="col-1 m-3">
-                    <p>About</p>
-            </div>
-
-            <div class="col-1 m-3">
-                    <p>About</p>
-            </div>
-
-            <div class="col-1 m-3">
-                    <p>About</p>
-            </div>
-
-            <div class="col-1 m-3">
-                    <p>About</p>
-            </div>
-        
-        </div>
-        <div class="row justify-content-center p-1">
-            <div class="col-2">
-
-                <div>
-                    <div class="row">
-                        <p>test</p>
-                    </div>
+                    <a name="" id="" class="btn btn-primary" href="#" role="button">Start Free Trial</a>
                 </div>
-                <div>
-                        <div class="row">
-                            <p>test</p>
-                        </div>
+            </div>
+        </section>
+
+        <!--footer section-->
+        <section class="footer p-5">
+            <!--footer-->
+            <footer>
+
+                <div class="row justify-content-start">
+
+                    <div class="col-1 m-3">
+                        <p>About</p>
                     </div>
-                    <div>
+
+                    <div class="col-1 m-3">
+                        <p>About</p>
+                    </div>
+
+                    <div class="col-1 m-3">
+                        <p>About</p>
+                    </div>
+
+                    <div class="col-1 m-3">
+                        <p>About</p>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center p-1">
+                    <div class="col-2">
+
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
                             <div class="row">
                                 <p>test</p>
                             </div>
                         </div>
 
-            </div>
-            <div class="col-md">
+                    </div>
+                    <div class="col-2">
 
-                    <ul class="list-unstyled text-center">
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-    
-                     
-                    </ul>
-                
-            </div>
-            <div class="col-md">
-              
-                    <ul class="list-unstyled">
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-    
-                     
-                    </ul>
-                
-             </div>
-             <div class="col-md">
-            
-                    <ul class="list-unstyled">
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-    
-                     
-                    </ul>
-                
-            </div>
-            <div class="col-md">
-                
-                    <ul class="list-unstyled">
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-    
-                     
-                    </ul>
-                    
-            </div>
-            <div class="col-md">
-             
-                    <ul class="list-unstyled">
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-                            <li><p>test</p></li>
-    
-                     
-                    </ul>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
 
-            </div>
-        </div>
-        <div class="p-3">
-        <div class="row justify-content-between p-1">
-            <div class="col-2 m-3">
-                <p>Lorem ipsum</p>
-            </div> 
-            <div class="col-2 m-3">
-                    <p>Lorem ipsum</p>
-                </div> 
-            
-        </div>
-        </div>
-       
-    </footer>
-</section>
+                    </div>
+
+                    <div class="col-2">
+
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-2">
+
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <p>test</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <br>
+                <div class="p-3">
+                    <div class="row justify-content-between p-1">
+                        <div class="col-2 m-3">
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <div class="col-2 m-3">
+                            <p>Lorem ipsum</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+        </section>
 
 </body>
 
